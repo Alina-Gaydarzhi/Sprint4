@@ -39,7 +39,6 @@ public class AccordionFAQTest extends BaseTest {
         String actualAnswer = faqPage.getTextAnswer(indexItemQuestion);
 
         assertEquals("Неверный ответ для вопроса " + indexItemQuestion,
-                expectedAnswerItem, actualAnswer); //Сравнение с expectedAnswerItem.
+                expectedAnswerItem, actualAnswer);
     }
-
 }
