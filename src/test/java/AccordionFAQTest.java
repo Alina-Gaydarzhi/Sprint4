@@ -1,7 +1,7 @@
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
-import pages.FAQPage;
+import pages.MainPage;
 
 import static org.junit.Assert.assertEquals;
 
@@ -32,11 +32,11 @@ public class AccordionFAQTest extends BaseTest {
 
     @Test
     public void answersFAQTest() {
-        FAQPage faqPage = new FAQPage(driver);
+        MainPage mainPage = new MainPage(driver);
 
-        faqPage.scrollLastItemQuestion();
-        faqPage.clickItemQuestionIndex(indexItemQuestion);
-        String actualAnswer = faqPage.getTextAnswer(indexItemQuestion);
+        mainPage.scrollLastItemQuestion();
+        mainPage.clickQuestion(indexItemQuestion);
+        String actualAnswer = mainPage.getTextAnswer(indexItemQuestion);
 
         assertEquals("Неверный ответ для вопроса " + indexItemQuestion,
                 expectedAnswerItem, actualAnswer);

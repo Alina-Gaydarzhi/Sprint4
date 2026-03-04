@@ -19,7 +19,7 @@ private By commentField = By.xpath(".//input[@placeholder='Комментари�
 private By orderButton = By.xpath(".//button[text()='Заказать' and contains(@class, 'Button_Middle__1CSJM')]");
 
 private By confirmOrderYesButton = By.xpath("//button[text()='Да']");
-private By orderPlaced = By.className("Order_ModalHeader__3FDaJ");
+private By orderPlaced = By.xpath("//div[contains(@class, 'Order_ModalHeader__3FDaJ') and contains(text(), 'Заказ оформлен')]");
 
     public OrderFormRentalConditions(WebDriver driver) {
         this.driver = driver;

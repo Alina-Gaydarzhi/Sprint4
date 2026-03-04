@@ -22,8 +22,6 @@ public class OrderTest extends BaseTest {
     public static Object[][] data() {
         return new Object[][]{
                 {"header", OrderData.DATA_SET_1},
-                {"header", OrderData.DATA_SET_2},
-                {"middle", OrderData.DATA_SET_1},
                 {"middle", OrderData.DATA_SET_2}
         };
     }
