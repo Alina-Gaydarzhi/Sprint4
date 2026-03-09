@@ -17,6 +17,7 @@ private By blackCheckbox = By.id("black");
 private By greyCheckbox = By.id("grey");
 private By commentField = By.xpath(".//input[@placeholder='Комментарий для курьера']");
 private By orderButton = By.xpath(".//button[text()='Заказать' and contains(@class, 'Button_Middle__1CSJM')]");
+private By orederModal = By.xpath("//div[contains(@class, 'Order_Modal__YZ-d3')]");
 
 private By confirmOrderYesButton = By.xpath("//button[text()='Да']");
 private By orderPlaced = By.xpath("//div[contains(@class, 'Order_ModalHeader__3FDaJ') and contains(text(), 'Заказ оформлен')]");
@@ -35,7 +36,7 @@ private By orderPlaced = By.xpath("//div[contains(@class, 'Order_ModalHeader__3F
     public void clickOrderButton() {
         driver.findElement(orderButton).click();
         new WebDriverWait(driver, Duration.ofSeconds(10))
-                .until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[contains(@class, 'Order_Modal__YZ-d3')]")));
+                .until(ExpectedConditions.visibilityOfElementLocated(orederModal));
     }
 
     public void confirmOrderYesButton() {
